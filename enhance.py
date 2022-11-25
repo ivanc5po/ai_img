@@ -8,7 +8,7 @@
 #
 
 __version__ = '0.3'
-
+from PIL import Image
 import io
 import os
 import sys
