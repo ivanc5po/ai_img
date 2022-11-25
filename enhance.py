@@ -563,7 +563,7 @@ class NeuralEnhancer(object):
 
         return scipy.misc.toimage(output, cmin=0, cmax=255)
 
-
+import imageio
 if __name__ == "__main__":
     if args.train:
         args.zoom = 2**(args.generator_upscale - args.generator_downscale)
@@ -573,7 +573,7 @@ if __name__ == "__main__":
         enhancer = NeuralEnhancer(loader=False)
         for filename in args.files:
             print(filename, end=' ')
-            img = scipy.ndimage.imread(filename, mode='RGB')
+            img = imageio.imread(filename, mode='RGB')
             out = enhancer.process(img)
             out.save("index.png")
             print(flush=True)
