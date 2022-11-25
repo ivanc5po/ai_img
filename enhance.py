@@ -575,6 +575,6 @@ if __name__ == "__main__":
             print(filename, end=' ')
             img = scipy.ndimage.imread(filename, mode='RGB')
             out = enhancer.process(img)
-            out.save("/content/index.png")
+            out.save("index.png")
             print(flush=True)
         print(ansi.ENDC)
